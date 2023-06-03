@@ -76,10 +76,10 @@ while playing:
     if keys[K_RIGHT] and player_rect.right < WIDTH:
         player_rect = player_rect.move(player_move_right)
 
-    if keys[K_LEFT] and player_rect.left < WIDTH:
+    if keys[K_LEFT] and player_rect.left > 0:
         player_rect = player_rect.move(player_move_left)
 
-    if keys[K_UP] and player_rect.top <HEIGHT:
+    if keys[K_UP] and player_rect.top > 0:
         player_rect = player_rect.move(player_move_up)
     
     for enemy in enemies:
